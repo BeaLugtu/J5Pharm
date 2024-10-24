@@ -1,0 +1,33 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+img {
+  width: 100px; /* Set the width for your logo */
+}
+
+
+/* Footer styling */
+.bg-footer {
+  background-color: #143827;
+  padding: 10px;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  text-align: center; /* Center footer text */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.footer-font{
+  font-size: 0.875rem;
+}
+
+.subtitle{
+  margin-bottom: 500px;
+}
