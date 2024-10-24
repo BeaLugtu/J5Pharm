@@ -31,3 +31,14 @@ img {
 .subtitle{
   margin-bottom: 500px;
 }
+
+.btn-hover:hover {
+  background-color: #0D7220; /* Slightly darker green */
+  transform: scale(1.01); /* Slight increase in size */
+}
+
+.btn-forgot-hover:hover {
+  color: #515151; /* Darker shade for Forgot Password */
+  transform: scale(1.02); /* Slight increase in size */
+
+}
