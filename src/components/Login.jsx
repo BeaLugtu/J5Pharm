@@ -18,8 +18,12 @@ const Login = () => {
         navigate("/loadingPage"); // Navigate to LoadingPage
     }
 
+    const handleForgotPassword = () => {
+        navigate("/forgotPass")
+    }
+
     return (
-        <div className="d-flex flex-column min-vh-100" style={{ backgroundColor:'#FCFCFC' }}>
+        <div className="font-all d-flex flex-column min-vh-100" style={{ backgroundColor:'#FCFCFC' }}>
             <div className="my-auto">
                 <div className="text-center">
                     <div className="position-relative" style={{ width: '80px', height: '80px', margin: '0 auto' }}>
@@ -115,6 +119,7 @@ const Login = () => {
                             }}
                             type="button"
                             className="btn btn-link btn-forgot-hover"
+                            onClick={handleForgotPassword}
                         >
                             Forgot Password
                         </button>

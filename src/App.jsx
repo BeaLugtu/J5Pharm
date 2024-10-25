@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LoadingPage from './components/LoadingPage'
 import SuperAdminDashboard from './components/Dashboards/SuperAdminDashboard'
 import NotFound from './components/NotFoundPage'
+import ForgotPass from './components/ForgotPass'
+import RequestSubmitted from './components/RequestSubmitted'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route path='/loadingPage' element={<LoadingPage />}></Route>
+          <Route path='/forgotPass' element={<ForgotPass />}></Route>
+          <Route path='/requestSubmitted' element={<RequestSubmitted />}></Route>
           <Route path='/superAdminDashboard' element={<SuperAdminDashboard/>}></Route>
           {/* Catch-all route for undefined paths */}
           <Route path="*" element={<NotFound />} />
