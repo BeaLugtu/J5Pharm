@@ -15,7 +15,7 @@ const Login = () => {
 
     // Handle Continue button click
     const handleContinueClick = () => {
-        navigate("/loading"); // Navigate to LoadingPage
+        navigate("/loadingPage"); // Navigate to LoadingPage
     }
 
     return (

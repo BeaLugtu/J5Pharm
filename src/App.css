@@ -3,12 +3,12 @@
 
 html, body {
   height: 100%;
-  margin: 0; /* Remove default margin */
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  margin: 0; 
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
-  width: 100px; /* Set the width for your logo */
+  width: 100px; 
 }
 
 
@@ -16,10 +16,10 @@ img {
 .bg-footer {
   background-color: #143827;
   padding: 10px;
-  display: flex; /* Use Flexbox */
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
-  text-align: center; /* Center footer text */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center; 
   font-family: 'Poppins', sans-serif;
   color: white;
 }
@@ -28,17 +28,62 @@ img {
   font-size: 0.875rem;
 }
 
-.subtitle{
-  margin-bottom: 500px;
-}
 
+/* Login Page */
 .btn-hover:hover {
-  background-color: #0D7220; /* Slightly darker green */
-  transform: scale(1.01); /* Slight increase in size */
+  background-color: #0D7220; 
+  transform: scale(1.01); 
 }
 
 .btn-forgot-hover:hover {
-  color: #515151; /* Darker shade for Forgot Password */
-  transform: scale(1.02); /* Slight increase in size */
+  color: #515151; 
+  transform: scale(1.02); 
 
+}
+
+
+/* Loading Page */
+.loader {
+  margin-left: 10px;
+  display: block;
+  position: relative;
+  height: 10px; /* Height of the loading bar */
+  width: 287px; /* Width of the loading bar */
+  background-color: #D9D9D9; /* Background color of the bar */
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 20px; /* Optional: Adds space between text and loading bar */
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0; /* Start width is 0 */
+  border-radius: 50px; /* Makes the moving bar rounded as well */
+  background: linear-gradient(to right, #89C15E 0%, #4DA7ED 50%, #B02138 100%); /* Linear gradient */
+  animation: prog 5s ease-in-out forwards; /* Animation duration matches the loading time */
+}
+
+@keyframes prog {
+  to {
+      width: 100%; /* Fills the bar to 100% */
+  }
+}
+
+.titleNameLoading {
+  background: linear-gradient(to right, #89C15E 0%, #4DA7ED 50%, #B02138 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 25px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: Bold text */
+  font-family: 'Poppins', sans-serif;
+  margin-left: -13px;
+}
+
+/* Not Found Page */
+.font-all{
+  font-family: 'Poppins', sans-serif;
 }
