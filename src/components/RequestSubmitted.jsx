@@ -33,9 +33,9 @@ const RequestSubmitted = () => {
                     </div>
                     <h1 className="h2 fw-bold" style={{ color: '#1D242E', marginTop: '-4px' }}>Request Submitted!</h1>
                     <p className="mb-4 fw-regular" style={{
-                        maxWidth: '455px',
+                        maxWidth: '404px',
                         margin: '0 auto',
-                        color: '#6c757d',
+                        color: '#1D242E',
                         fontSize: '15px',
                         lineHeight: '1.5',
                         marginTop: '10px',
@@ -54,7 +54,7 @@ const RequestSubmitted = () => {
                             color: 'white',
                             border: '#0F8420',
                             fontSize: '16px',
-                            marginTop: '35px',
+                            marginTop: '5px',
                             transition: 'background-color 0.3s ease, transform 0.3s ease',
                         }}
                         type="submit"
