@@ -38,7 +38,7 @@ const Header = () => {
         };
 
         updateGreetingAndIcon();
-        const intervalId = setInterval(updateGreetingAndIcon, 60000); // Update every minute
+        const intervalId = setInterval(updateGreetingAndIcon, 0); // Update every minute
 
         return () => clearInterval(intervalId); // Cleanup on unmount
     }, []);
@@ -102,11 +102,14 @@ const Header = () => {
                 {/* Offcanvas Menu */}
                 <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                            {/* Keeping Greeting and Date in Offcanvas Title */}
-                            {greeting} {icon} <br />
-                            <small style={{ fontSize: '12px' }}>{currentTime}</small>
-                        </h5>
+                        <div className=" text-start">
+                            <p className="mb-0 fw-bold fs-5" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>
+                                {greeting} {icon}
+                            </p>
+                            <small style={{ whiteSpace: 'nowrap', fontSize: '12px' }}>
+                                {currentTime}
+                            </small>
+                        </div>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body">
