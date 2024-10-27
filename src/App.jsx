@@ -3,10 +3,10 @@ import './App.css'
 import Login from './components/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import LoadingPage from './components/LoadingPage'
-import SuperAdminDashboard from './components/Dashboards/SuperAdminDashboard'
 import NotFound from './components/NotFoundPage'
 import ForgotPass from './components/ForgotPass'
 import RequestSubmitted from './components/RequestSubmitted'
+import SuperAdminDashboard from './components/DashboardContent/Dashboards/SuperAdminDashboard'
 
 function App() {
 
