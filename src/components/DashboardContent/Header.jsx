@@ -58,11 +58,11 @@ const Header = () => {
                     </a>
                 </div>
 
-                {/* Search Bar */}
-                <form className="d-flex flex-grow-1 pe-2 ps-4" role="search">
+                {/* Search Bar (Visible on larger screens) */}
+                <form className="d-none d-md-flex flex-grow-1 pe-2 ps-4" role="search">
                     <div className="input-group">
                         <input
-                            className="form-control me-2 d-none d-md-block"
+                            className="form-control me-2"
                             type="search"
                             placeholder="Search Medicine here"
                             aria-label="Search"
@@ -70,44 +70,68 @@ const Header = () => {
                         />
                         <button
                             type="submit"
-                            className="btn d-none d-md-block" // Added class for hover effect
+                            className="btn"
                             aria-label="Search"
                             style={{
                                 backgroundColor: 'white',
                                 border: 'none',
                                 marginLeft: '-8px',
-                                cursor: 'pointer', // Ensures it remains a pointer on hover
+                                cursor: 'pointer',
                             }}
                         >
-                            <FaSearch className='search-btn' />
+                            <FaSearch />
                         </button>
-
-                        {/* Search icon button on smaller screens */}
-                        <button
-                            type="button"
-                            className="btn d-md-none ms-auto" // Added class for hover effect
-                            aria-label="Search"
-                            style={{
-                                marginLeft: 'auto',
-                                backgroundColor: 'transparent',
-                                border: 'none',
-                                cursor: 'pointer', // Ensures it remains a pointer on hover
-                            }}
-                        >
-                            <FaSearch className='search-btn' />
-                        </button>
-
                     </div>
                 </form>
 
-                {/* Greeting and Date */}
-                <div className="text-end d-flex flex-column pe-5" style={{ flexShrink: 0 }}>
+                {/* Greeting and Date (Visible on larger devices) */}
+                <div className="text-end d-none d-md-flex flex-column pe-5" style={{ flexShrink: 0 }}>
                     <p className="mb-0 fw-bold" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>
                         {greeting} {icon}
                     </p>
                     <small style={{ whiteSpace: 'nowrap', fontSize: '12px' }}>
                         {currentTime}
                     </small>
+                </div>
+
+                {/* Hamburger Toggle Button for Small Devices (Positioned on the right) */}
+                <button className="navbar-toggler d-md-none me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                {/* Offcanvas Menu */}
+                <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+                            {/* Keeping Greeting and Date in Offcanvas Title */}
+                            {greeting} {icon} <br />
+                            <small style={{ fontSize: '12px' }}>{currentTime}</small>
+                        </h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div className="offcanvas-body">
+                        <form className="d-flex" role="search">
+                            <input
+                                className="form-control me-2"
+                                type="search"
+                                placeholder="Search Medicine here"
+                                aria-label="Search"
+                                style={{ backgroundColor: '#E3EBF3', fontSize: '13px', border: 'none' }}
+                            />
+                            <button
+                                type="submit"
+                                className="btn"
+                                aria-label="Search"
+                                style={{
+                                    backgroundColor: 'white',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                <FaSearch />
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>
