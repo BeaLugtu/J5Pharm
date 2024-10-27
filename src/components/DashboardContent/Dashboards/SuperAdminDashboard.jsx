@@ -1,8 +1,9 @@
+import Header from "../Header";
 
 const SuperAdminDashboard = () => {
     return (
-        <div className="container">
-            <p>Bea</p>
+        <div className="">
+            <Header />
         </div>
     );
 };

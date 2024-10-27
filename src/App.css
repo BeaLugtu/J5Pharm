@@ -96,3 +96,13 @@ img {
 .btn-exit:hover {
   transform: scale(1.07); 
 }
+
+/* Header Dashboard */
+.search-btn {
+  transition: transform 0.2s; /* Smooth transition */
+}
+
+.search-btn:hover {
+  transform: scale(1.1); /* Scale to 110% on hover */
+}
+
