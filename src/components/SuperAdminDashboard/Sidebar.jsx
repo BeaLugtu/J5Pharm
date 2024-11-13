@@ -21,9 +21,11 @@ import CollapseNavbar from '../../assets/CollapseNavbar.png'
 
 const Sidebar = () => {
     const [headerHeight, setHeaderHeight] = useState(0);
-    const [selectedLink, setSelectedLink] = useState(null); // Track selected link
-    const [expandedSections, setExpandedSections] = useState({}); // Track expanded sections
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [selectedLink, setSelectedLink] = useState('dashboard'); // Track selected link
+    const [expandedSections, setExpandedSections] = useState({
+        inventory: false
+    });
+    const [isCollapsed, setIsCollapsed] = useState(false); // State to track if sidebar is collapsed
 
 
     useEffect(() => {
@@ -44,22 +46,21 @@ const Sidebar = () => {
         }));
     };
 
+
+
     return (
         <div className="font-all d-flex" style={{ backgroundColor: '#FCFCFC', height: '100vh', overflow: 'hidden' }}>
-
-
             {/* Sidebar */}
             <div
+                className="d-none d-md-flex flex-column justify-content-between"
                 style={{
                     width: '286px',
                     backgroundColor: '#224E39',
                     paddingTop: '15px',
                     position: 'fixed',
                     height: '100vh',
-                    display: 'flex',
-                    flexDirection: 'column',
                     color: '#f5f5f5',
-                    position: 'relative'
+                    overflowY: 'auto',
                 }}
             >
                 {/* Collapsed Navbar*/}
@@ -417,14 +418,16 @@ const Sidebar = () => {
 
                 {/* Footer */}
                 <footer style={{
-                    height: '135px',
+                    height: '105px',
                     backgroundColor: '#183E2C',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    paddingBottom: '40px',
+                    padding: '20px',
                     paddingBottom: '40px'
                 }}>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                         <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.7)' }}>J’5 Pharmacy © 2024</p>
                         <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.7)' }}>v1.0</p>
                     </div>
