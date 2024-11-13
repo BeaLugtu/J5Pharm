@@ -141,9 +141,12 @@ const Header = () => {
 
                         {/* Nav Links */}
                         <ul className="navbar-nav">
+                            {/* Dashboard Link */}
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Dashboard</a>
                             </li>
+
+                            {/* Inventory with dropdown */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Inventory
@@ -155,16 +158,70 @@ const Header = () => {
                                 </ul>
                             </li>
 
-                            {/* Other nav items */}
+                            {/* Pharmacy Operations with placeholder dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pharmacy Operations
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Dropdown 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 3</a></li>
+                                </ul>
+                            </li>
+
+                            {/* Reports with placeholder dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Reports
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Dropdown 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 3</a></li>
+                                </ul>
+                            </li>
+
+                            {/* Employee & Staff with placeholder dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Employee & Staff
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Dropdown 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 3</a></li>
+                                </ul>
+                            </li>
+
+                            {/* Customer Info with placeholder dropdown */}
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Customer Info
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li><a className="dropdown-item" href="#">Dropdown 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Dropdown 3</a></li>
+                                </ul>
+                            </li>
+
+                            {/* User Logs (No dropdown) */}
                             <li className="nav-item">
                                 <a className="nav-link" href="#">User Logs</a>
                             </li>
+
+                            {/* Setting (No dropdown) */}
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Setting</a>
                             </li>
+
+                            {/* Notification (No dropdown) */}
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Notification</a>
                             </li>
+
+                            {/* Branches (No dropdown) */}
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Branches</a>
                             </li>
