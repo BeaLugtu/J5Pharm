@@ -1,8 +1,8 @@
 // LoadingPage.jsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logoJ5Pharmacy from "../assets/logoJ5Pharmacy.png";
-import NamePharmacy from "../assets/NamePharmacy.png"
+import logoJ5Pharmacy from "../../assets/logoJ5Pharmacy.png";
+import NamePharmacy from "../../assets/NamePharmacy.png"
 
 const LoadingPage = () => {
     const navigate = useNavigate();

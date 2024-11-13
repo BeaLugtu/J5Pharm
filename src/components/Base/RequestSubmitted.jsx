@@ -1,19 +1,18 @@
+import logoJ5Pharmacy from "../../assets/logoJ5Pharmacy.png";
 import Footer from "./Footer";
-import logoJ5Pharmacy from "../assets/logoJ5Pharmacy.png";
-import QuestionMarkIcon from "../assets/QuestionMarkIcon.png"; // Assuming you save the question mark background here
+import { useNavigate } from 'react-router-dom';
 
-const NotFound = () => {
+const RequestSubmitted = () => {
+
+    const navigate = useNavigate(); // Initialize the navigate hook
+
+    const handleContinueClick = () => {
+        navigate("/"); // Navigate to Login
+    }
+
+
     return (
-        <div
-            className="font-all d-flex flex-column min-vh-100 img-fluid"
-            style={{
-                backgroundColor: '#FCFCFC',
-                backgroundImage: `url(${QuestionMarkIcon})`, // Adding the background image
-                backgroundSize: 'cover', // Ensures the background covers the entire area
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-            }}
-        >
+        <div className="font-all d-flex flex-column min-vh-100">
             <div className="my-auto">
                 <div className="text-center">
                     <div
@@ -32,17 +31,17 @@ const NotFound = () => {
                             style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                         />
                     </div>
-                    <h2 className="h4 fw-bold" style={{ color: '#1D242E' }}>404</h2>
-                    <h1 className="h2 fw-bold" style={{ color: '#1D242E', marginTop: '-4px' }}>Oops, page not found</h1>
+                    <h1 className="h2 fw-bold" style={{ color: '#1D242E', marginTop: '-4px' }}>Request Submitted!</h1>
                     <p className="mb-4 fw-regular" style={{
-                        maxWidth: '455px',
+                        maxWidth: '404px',
                         margin: '0 auto',
-                        color: '#6c757d',
+                        color: '#1D242E',
                         fontSize: '15px',
                         lineHeight: '1.5',
                         marginTop: '10px',
                     }}>
-                        The page you're looking for doesn't exist or has been moved. Please check the URL or return to the homepage.
+                        Your request is received. A new password will be
+                        sent to your email shortly                    
                     </p>
                     <button
                         style={{
@@ -55,11 +54,12 @@ const NotFound = () => {
                             color: 'white',
                             border: '#0F8420',
                             fontSize: '16px',
-                            marginTop: '35px',
+                            marginTop: '5px',
                             transition: 'background-color 0.3s ease, transform 0.3s ease',
                         }}
                         type="submit"
                         className="mb-1 btn-hover"
+                        onClick={handleContinueClick}
                     >
                         Go Back
                     </button>
@@ -70,4 +70,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default RequestSubmitted;

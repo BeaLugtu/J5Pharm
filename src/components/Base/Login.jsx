@@ -1,5 +1,5 @@
 import Footer from "./Footer";
-import logoJ5Pharmacy from "../assets/logoJ5Pharmacy.png";
+import logoJ5Pharmacy from "../../assets/logoJ5Pharmacy.png";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'; // Import useNavigate

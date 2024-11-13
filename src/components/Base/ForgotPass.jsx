@@ -1,6 +1,6 @@
-import logoJ5Pharmacy from "../assets/logoJ5Pharmacy.png";
+import logoJ5Pharmacy from "../../assets/logoJ5Pharmacy.png";
 import Footer from "./Footer";
-import exitButton from "../assets/exitButton.png"; // Assuming you have an exit button icon
+import exitButton from "../../assets/exitButton.png"; // Assuming you have an exit button icon
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ForgotPass = () => {
