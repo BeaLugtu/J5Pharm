@@ -49,18 +49,19 @@ const Sidebar = () => {
 
 
     return (
-        <div className="font-all d-flex" style={{ backgroundColor: '#FCFCFC', height: '100vh', overflow: 'hidden' }}>
+        <div className="font-all d-none d-md-block" style={{ backgroundColor: '#FFFFFF', width: '310px',height: '100vh', overflow: 'hidden' }}>
+
             {/* Sidebar */}
             <div
-                className="d-none d-md-flex flex-column justify-content-between"
                 style={{
                     width: '286px',
                     backgroundColor: '#224E39',
                     paddingTop: '15px',
-                    position: 'fixed',
-                    height: '100vh',
+                    display: 'flex',
+                    flexDirection: 'column',
                     color: '#f5f5f5',
-                    overflowY: 'auto',
+                    height: '100vh', // This line ensures the sidebar fills the full height of the screen
+                    position: 'relative',
                 }}
             >
                 {/* Collapsed Navbar*/}
@@ -68,8 +69,8 @@ const Sidebar = () => {
                     style={{
                         position: 'absolute',
                         zIndex: 10,
-                        bottom: '114px', // Moved to bottom
-                        right: '-22px',  // Moved to right
+                        bottom: '150px',  // Adjust this value based on where you want the button
+                        right: '-22px',
                         width: '22px',
                         height: '50px',
                         display: 'flex',
@@ -77,13 +78,11 @@ const Sidebar = () => {
                         justifyContent: 'center',
                         cursor: 'pointer',
                         paddingRight: '5px',
-                        borderTopLeftRadius: '0px', // Corrected property name
-                        borderTopRightRadius: '50px', // Corrected property name
-                        borderBottomLeftRadius: '0px', // Corrected property name
-                        borderBottomRightRadius: '50px', // Corrected property name
-                        backgroundColor: '#455162', // Kept the color as per your previous code
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Added shadow for a design effect
-                    }}>
+                        borderRadius: '0 50px 50px 0',
+                        backgroundColor: '#455162',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    }}
+                >
 
 
                     <img src={CollapseNavbar} alt="" style={{ width: '8px', height: '7.71px', transform: 'rotate(180deg)' }} />
@@ -423,15 +422,17 @@ const Sidebar = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    paddingBottom: '40px',
                     padding: '20px',
-                    paddingBottom: '40px'
+                    paddingBottom: '50px',
+                    marginTop: 'auto',  // This line was added
+                    marginBottom: '10px'
                 }}>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                    <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
                         <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.7)' }}>J’5 Pharmacy © 2024</p>
                         <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.7)' }}>v1.0</p>
                     </div>
                 </footer>
+
             </div>
         </div>
     );
