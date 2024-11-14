@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import headerLogo from '../../assets/headerLogo.png';
+import smallHeaderLogo from '../../assets/smallHeaderLogo.png';
 import { FaSearch } from 'react-icons/fa'; // Import the search icon
 import { FaSun, FaMoon, FaCloudSun } from 'react-icons/fa'; // Import icons
 import GenericAvatar from '../../assets/GenericAvatar.png';
 import DotsMoreDark from '../../assets/DotsMoreDark.png';
 
 
-const Header = () => {
+const Header = ({ sidebarCollapsed }) => {
     const [greeting, setGreeting] = useState('');
     const [icon, setIcon] = useState(<FaSun />); // Default icon
     const [currentTime, setCurrentTime] = useState('');
@@ -51,15 +52,22 @@ const Header = () => {
             <div className="container-fluid d-flex justify-content-between align-items-center" style={{ paddingLeft: '0', paddingRight: '0' }}>
 
                 {/* Logo */}
-                <div style={{ paddingLeft: '12px', backgroundColor: 'white', flexShrink: 0, width: '286px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ paddingLeft: '12px', backgroundColor: 'white', flexShrink: 0, width: sidebarCollapsed ? '100px' : '286px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '59.7812px' }}>
                     <a className="navbar-brand mb-0" href="#">
                         <img
-                            src={headerLogo}
+                            src={sidebarCollapsed ? smallHeaderLogo : headerLogo} // Conditionally set the logo based on sidebar state
                             alt="J5 Pharmacy Logo"
-                            style={{ width: '100%', maxWidth: '162px', height: 'auto' }}
+                            style={{
+                                width: sidebarCollapsed ? '42px' : 'auto', // Set width to 52px when collapsed, else auto
+                                height: sidebarCollapsed ? '52px' : 'auto', // Set height to 59px when collapsed, else auto
+                                maxWidth: sidebarCollapsed ? '42px' : '162px', // Max width of 52px when collapsed, else 162px
+                                height: 'auto', // Maintain aspect ratio for height
+                                transition: 'width 1.3s ease, height 1.3s ease'  // Smooth transition for width and height changes
+                            }}
                         />
                     </a>
                 </div>
+
 
                 {/* Search Bar (Visible on larger screens) */}
                 <form className="d-none d-md-flex flex-grow-1 pe-2 ps-4" role="search">

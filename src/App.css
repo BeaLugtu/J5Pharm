@@ -211,3 +211,7 @@ img {
 }
 
 
+#sidebar.collapsed {
+  width: 60px; /* Set collapsed width */
+  transition: width 0.3s ease; /* Smooth transition */
+}
