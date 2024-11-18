@@ -19,7 +19,7 @@ import TypesIcon from '../../assets/TypesIcon.png'
 import CategoryIcon from '../../assets/CategoryIcon.png'
 import CollapseNavbar from '../../assets/CollapseNavbar.png'
 
-const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
+const Sidebar = ({ sidebarCollapsed, toggleSidebar }) => {
     const [headerHeight, setHeaderHeight] = useState(0);
     const [selectedLink, setSelectedLink] = useState('dashboard'); // Track selected link
     const [expandedSections, setExpandedSections] = useState({
@@ -46,7 +46,7 @@ const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
 
 
     return (
-        <div className="font-all d-none d-md-block" style={{ backgroundColor: '#FFFFFF', width: '310px', height: '100vh' }}>
+        <div className="sidebar-container font-all d-none d-md-block" style={{ backgroundColor: '#FFFFFF', width: '310px', height: '100vh' }}>
 
             {/* Sidebar */}
             <div
@@ -153,6 +153,7 @@ const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
                         {/* Dashboard Link */}
                         <li className="nav-item" style={{ padding: '0px' }}>
                             <Link
+                                to="/superAdminDashboard/overviewHomeDashboard"
                                 className="nav-link text-white"
                                 style={{
                                     backgroundColor: selectedLink === 'dashboard' ? '#009917' : '',
@@ -172,7 +173,7 @@ const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
                                 />
                                 {/* Only show text if expanded */}
                                 <span className={sidebarCollapsed ? 'd-none' : ''} style={{ whiteSpace: 'nowrap' }}>Dashboard</span>
-                                </Link>
+                            </Link>
                         </li>
 
                         {/* Inventory Section */}
@@ -482,7 +483,7 @@ const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
                                     style={{ width: '20px', height: '20px', marginRight: '15px' }}
                                 />
                                 {/* Only show text if expanded */}
-                                <span className={sidebarCollapsed ? 'd-none' : ''} style={{ whiteSpace: 'nowrap'}}>Settings</span>
+                                <span className={sidebarCollapsed ? 'd-none' : ''} style={{ whiteSpace: 'nowrap' }}>Settings</span>
                             </Link>
                         </li>
 
@@ -513,6 +514,7 @@ const Sidebar = ({sidebarCollapsed, toggleSidebar}) => {
                         {/* Branches Link */}
                         <li className="nav-item" style={{ padding: '0px' }}>
                             <Link
+                                to="/overviewBranches"
                                 className="nav-link text-white"
                                 style={{
                                     backgroundColor: selectedLink === 'branches' ? '#009917' : '',
